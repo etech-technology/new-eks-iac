@@ -7,7 +7,6 @@
 This tutorial will guide you through deploying AWS EKS clusters using Terraform. The assumption is that you have a basic understanding of Terraform and HCP Terraform workflows. If you're unfamiliar with either, consider completing the following tutorials first:
 
 - [Get Started with Terraform](https://learn.hashicorp.com/collections/terraform/getting-started)
-- [Get Started with HCP Terraform](https://learn.hashicorp.com/collections/terraform/cloud-get-started)
 
 ## Prerequisites
 
@@ -43,6 +42,8 @@ Create a '~/.kube/config' on your local machine
 
 ```
 aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
-
+kubectl cluster-info
+kubectl get nodes
 ```
+
 

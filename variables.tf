@@ -1,5 +1,5 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
+# Copyright (c) Etech Consulting, LLC.
+# Release eks version: 21-10-2024-v1
 
 variable "region" {
   description = "AWS region"
