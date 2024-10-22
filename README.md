@@ -39,5 +39,10 @@ Create a '~/.kube/config' on your local machine
  $ sudo mkdir ~/.kube && touch ~/.kube/config
  $ sudo chown -R $USER ~/.kube/config
 ```
+## Add your cluster context to your ~/.kube/config file using this:
 
+```
+aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
+
+```
 
